@@ -1,0 +1,31 @@
+{
+    "name": "shdl",
+    "displayName": "shdl",
+    "description": "shdl syntax highlighting",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.21.0"
+    },
+    "publisher": "one7",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/jannik4/vscode-shdl"
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "shdl",
+                "extensions": [
+                    ".shdl"
+                ]
+            }
+        ],
+        "grammars": [
+            {
+                "language": "shdl",
+                "scopeName": "source.shdl",
+                "path": "./syntaxes/shdl.tmGrammar.json"
+            }
+        ]
+    }
+}

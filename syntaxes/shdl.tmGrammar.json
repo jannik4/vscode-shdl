@@ -1,0 +1,69 @@
+{
+    "name": "shdl",
+    "scopeName": "source.shdl",
+    "patterns": [
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#comments"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.shdl",
+                    "match": "//.*"
+                },
+                {
+                    "name": "comment.block.shdl",
+                    "begin": "/\\*",
+                    "end": "\\*/",
+                    "patterns": [{ "include": "#comments" }]
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.other.shdl",
+                    "match": "\\b(use|package|type|component|impl|constant|signal|if|else|for|in|process|entity|wait|on|until|report|assert|while|struct|view|of|out|in|to|downto|others|trze|false|fs|ps|ns|us|ms|sec|min|hr)\\b"
+                },
+                {
+                    "name": "variable.name.shdl",
+                    "match": "[a-zA-Z_][a-zA-Z0-9_]*"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.single.shdl",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.shdl",
+                            "match": "\\\\."
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.single.shdl",
+                    "begin": "'",
+                    "end": "'",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.shdl",
+                            "match": "\\\\."
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
