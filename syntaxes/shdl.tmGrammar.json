@@ -2,17 +2,27 @@
     "name": "shdl",
     "scopeName": "source.shdl",
     "patterns": [
-        {
-            "include": "#keywords"
-        },
-        {
-            "include": "#strings"
-        },
-        {
-            "include": "#comments"
-        }
+        { "include": "#entityBlock" },
+        { "include": "#keywords" },
+        { "include": "#types" },
+        { "include": "#variables" },
+        { "include": "#strings" },
+        { "include": "#comments" }
     ],
     "repository": {
+        "entityBlock": {
+            "begin": "(\\bentity\\b)[^\\{]*\\{",
+            "beginCaptures": {
+                "1": { "name": "keyword.other.shdl" }
+            },
+            "end": "\\}",
+            "patterns": [
+                { "include": "#keywords" },
+                { "include": "#variables" },
+                { "include": "#strings" },
+                { "include": "#comments" }
+            ]
+        },
         "comments": {
             "patterns": [
                 {
@@ -32,7 +42,19 @@
                 {
                     "name": "keyword.other.shdl",
                     "match": "\\b(use|package|type|component|impl|constant|signal|if|else|for|in|process|entity|wait|on|until|report|assert|while|struct|view|of|out|in|to|downto|others|true|false|fs|ps|ns|us|ms|sec|min|hr)\\b"
-                },
+                }
+            ]
+        },
+        "types": {
+            "patterns": [
+                {
+                    "name": "entity.name.type.shdl",
+                    "match": "(?<=:\\s*(?:in|out)?\\s*\\[*)([a-zA-Z_][a-zA-Z0-9_]*)"
+                }
+            ]
+        },
+        "variables": {
+            "patterns": [
                 {
                     "name": "variable.name.shdl",
                     "match": "[a-zA-Z_][a-zA-Z0-9_]*"
