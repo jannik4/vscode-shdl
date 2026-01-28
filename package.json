@@ -2,22 +2,27 @@
     "name": "shdl",
     "displayName": "shdl",
     "description": "shdl syntax highlighting",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "engines": {
-        "vscode": "^1.21.0"
+        "vscode": "^1.75.0"
     },
     "publisher": "one7",
     "repository": {
         "type": "git",
         "url": "https://github.com/jannik4/vscode-shdl"
     },
+    "main": "./extension.js",
     "contributes": {
         "languages": [
             {
                 "id": "shdl",
+                "aliases": [
+                    "shdl"
+                ],
                 "extensions": [
                     ".shdl"
-                ]
+                ],
+                "configuration": "./languages/shdl.json"
             }
         ],
         "grammars": [
