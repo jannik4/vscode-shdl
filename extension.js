@@ -1,6 +1,7 @@
 const vscode = require("vscode");
 
 const SHDL_KEYWORDS = [
+    "extern",
     "use",
     "package",
     "type",
