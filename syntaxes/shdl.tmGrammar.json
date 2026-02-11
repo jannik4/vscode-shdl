@@ -2,7 +2,7 @@
     "name": "shdl",
     "scopeName": "source.shdl",
     "patterns": [
-        { "include": "#entityBlock" },
+        { "include": "#instantiateBlock" },
         { "include": "#keywords" },
         { "include": "#types" },
         { "include": "#variables" },
@@ -11,10 +11,11 @@
         { "include": "#comments" }
     ],
     "repository": {
-        "entityBlock": {
-            "begin": "(\\bentity\\b)[^\\{]*\\{",
+        "instantiateBlock": {
+            "begin": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b\\s*:\\s*(?:(\\bextern\\b)\\s+)?(\\bentity\\b|\\bcomponent\\b)[^\\{]*\\{",
             "beginCaptures": {
-                "1": { "name": "keyword.other.shdl" }
+                "2": { "name": "keyword.other.shdl" },
+                "3": { "name": "keyword.other.shdl" }
             },
             "end": "\\}",
             "patterns": [
