@@ -13,6 +13,8 @@ const SHDL_KEYWORDS = [
     "file",
     "if",
     "else",
+    "case",
+    "when",
     "for",
     "switch",
     "process",
