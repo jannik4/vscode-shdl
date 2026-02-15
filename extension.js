@@ -34,14 +34,6 @@ const SHDL_KEYWORDS = [
     "others",
     "true",
     "false",
-    "fs",
-    "ps",
-    "ns",
-    "us",
-    "ms",
-    "sec",
-    "min",
-    "hr",
 ];
 
 function activate(context) {

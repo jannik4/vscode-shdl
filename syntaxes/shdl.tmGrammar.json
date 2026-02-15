@@ -44,7 +44,7 @@
             "patterns": [
                 {
                     "name": "keyword.other.shdl",
-                    "match": "\\b(extern|use|package|type|component|impl|constant|signal|variable|file|if|else|for|switch|process|entity|wait|on|until|report|assert|while|struct|view|interface|of|out|in|to|downto|others|true|false|fs|ps|ns|us|ms|sec|min|hr)\\b"
+                    "match": "\\b(extern|use|package|type|component|impl|constant|signal|variable|file|if|else|for|switch|process|entity|wait|on|until|report|assert|while|struct|view|interface|of|out|in|to|downto|others|true|false)\\b"
                 }
             ]
         },
