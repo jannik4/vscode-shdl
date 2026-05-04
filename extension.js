@@ -25,7 +25,7 @@ const SHDL_KEYWORDS = [
     "report",
     "assert",
     "while",
-    "struct",
+    "record",
     "view",
     "interface",
     "of",
@@ -36,6 +36,10 @@ const SHDL_KEYWORDS = [
     "others",
     "true",
     "false",
+    "alias",
+    "interface",
+    "exit",
+    "range",
 ];
 
 function activate(context) {
