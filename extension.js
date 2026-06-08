@@ -40,6 +40,11 @@ const SHDL_KEYWORDS = [
     "interface",
     "exit",
     "range",
+    "next",
+    "return",
+    "fn",
+    "enum",
+    "open",
 ];
 
 function activate(context) {
